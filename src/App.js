@@ -5,11 +5,27 @@ import About from './pages/About';
 import Layout from './components/Layout';
 import Featured from './components/Featured';
 import Premium from './components/Premium';
+import Login from './components/Login';
 import Match from './components/Match';
 import Video from './components/Video';
 import News from './components/News';
+import Stats from './components/Stats';
 
 function App() {
+
+  const url="https://520df678-f730-41ad-85f1-14c585777af1-00-29yt3mlyd8xas.sisko.replit.dev:5000/"
+  const [news,setNews]=useState("")
+  const fetchNews=async()=>{
+    const response=await fetch(url)
+    const data=await response.json()
+    setNews(data)
+  }
+  useEffect(()=>{
+    fetchNews()
+  },[])
+
+
+  
   const [active, setActive] = useState(false);
   const navbarRef = useRef();
 
@@ -52,8 +68,16 @@ function App() {
         },
         {
           path:"/news",
-          element:<News/>
+          element:<News news={news}/>
         },
+        {
+          path:"/stats/:id",
+          element:<Stats/>
+        },
+        {
+          path:"/login",
+          element:<Login/>
+        }
       ],
     },
   ]);

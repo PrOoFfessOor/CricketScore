@@ -11,6 +11,7 @@ const Navbar = ({ handleOnClick, active, navbarRef }) => {
         <span className={style.featured}><Link to="/featured">Featured</Link></span>
         <span className={style.name}>Local Score</span>
         <span className={style.premium}><Link to="/premium">Premium</Link></span>
+        
       </div>
 
       <div
@@ -25,6 +26,7 @@ const Navbar = ({ handleOnClick, active, navbarRef }) => {
           <li><Link to="/news">News</Link></li>
           <li><Link to="/match">Match</Link></li>
           <li><Link to="/video">Video</Link></li>
+          <li><Link to="/login">Login</Link></li>
         </ul>
       </div>
     </>

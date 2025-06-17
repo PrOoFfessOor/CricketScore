@@ -3,7 +3,7 @@ const Home = ()=>{
   return (
     <>
       <div className={style.score}>
-        <h1>Live Score</h1>
+        <h1>Score</h1>
       </div>
     </>
   )
