@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* MAIN CONTENT */
+.mainContent {
+  text-align: center;
+  overflow: auto;
+  height: 85vh;
+  width: 100vw;
+  background: linear-gradient(to right, #f0f4f8, #e8f0ff);
+  padding: 2rem;
+  margin-top:15vh;
+}
+
+/* TOP NAVBAR */
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+  width: 100vw;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* MENU BUTTON */
+.button {
+  color: white;
+  font-size: 2rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.15);
+}
+
+/* SIDEBAR */
+.Footer {
+  height: 100vh;
+  width: 25vw;
+  background: #1e293b;
+  color: white;
+  position: fixed;
+  left: -25vw;
+  top: 0;
+  transition: left 0.35s ease;
+  padding-top: 6rem;
+  z-index: 999;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  border-right: 2px solid #2dd4bf;
+}
+
+.Footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Footer ul li {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #334155;
+  transition: background 0.3s ease;
+}
+
+.Footer ul li:hover {
+  background-color: #334155;
+}
+
+/* NAV LINKS */
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2dd4bf;
+}
+
+/* APP NAME */
+.name {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color:#2dd4bf;
+  margin-left:1rem;
+}
+
+/* HEADER LINKS */
+.featured,
+.premium {
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.featured:hover,
+.premium:hover {
+  color: #2dd4bf;
+}
+
+/* BOTTOM BAR */
+.bottom {
+  width: 100vw;
+  height: 10vh;
+  background-color: #0f172a;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  font-size: 1.2rem;
+  border-top: 2px solid #2dd4bf;
+  text-decoration: underline;
+}
+
+/* SCORE SCROLLER */
+.score {
+  width: 100vw;
+  height: 50vh;
+  background-color: #c3f0ca;
+  margin-top: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  border-top: 2px solid #22c55e;
+  border-radius: 8px;
+}
+.scoreCart {
+  width: 60vw;
+  height: 30vh;
+  background-image: url('https://images.unsplash.com/photo-1508766206392-8bd5cf550d1b?auto=format&fit=crop&w=800&q=80'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  margin: 2rem auto;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.scoreCart:hover {
+  transform: scale(1.02);
+}
+
+.scoreCart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* Dark overlay */
+}
+
+.scoreCartContent {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scoreCartContent h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.scoreStats {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.statBox {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
