@@ -13,7 +13,7 @@ import Stats from './components/Stats';
 
 function App() {
 
-  const url="https://520df678-f730-41ad-85f1-14c585777af1-00-29yt3mlyd8xas.sisko.replit.dev:5000/"
+  const url="https://cricketscore-2.onrender.com"
   const [news,setNews]=useState("")
   const fetchNews=async()=>{
     const response=await fetch(url)
